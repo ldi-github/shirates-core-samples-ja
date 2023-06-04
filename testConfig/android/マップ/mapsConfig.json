@@ -1,0 +1,32 @@
+{
+  "testConfigName": "mapsConfig",
+
+  "appIconName": "マップ",
+
+  "packageOrBundleId": "com.google.android.apps.maps",
+
+  "startupPackageOrBundleId": "com.google.android.apps.maps",
+  "startupActivity": "com.google.android.maps.MapsActivity",
+
+  "dataset": {
+    "apps": "testConfig/android/マップ/dataset/apps.json"
+  },
+
+  "screens": {
+    "import": [
+      "testConfig/android/設定/screens",
+      "testConfig/android/電卓/screens",
+      "testConfig/android/その他/screens",
+      "testConfig/android/Play ストア/screen"
+    ]
+  },
+
+  "capabilities": {
+    "language": "ja",
+    "locale": "JP"
+  },
+
+  "profiles": [
+  ]
+
+}

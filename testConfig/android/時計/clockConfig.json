@@ -1,0 +1,22 @@
+{
+  "testConfigName": "clockConfig",
+
+  "appIconName": "時計",
+
+  "packageOrBundleId": "com.google.android.deskclock",
+
+  "startupPackageOrBundleId": "com.google.android.deskclock",
+  "startupActivity": "com.android.deskclock.HandleUris",
+
+  "dataset": {
+    "apps": "testConfig/android/時計/dataset/apps.json"
+  },
+
+  "capabilities": {
+    "language": "ja",
+    "locale": "JP"
+  },
+
+  "profiles": [
+  ]
+}

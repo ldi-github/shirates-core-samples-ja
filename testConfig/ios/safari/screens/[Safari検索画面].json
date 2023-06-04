@@ -1,0 +1,17 @@
+{
+  "key": "[Safari検索画面]",
+
+  "include": [
+  ],
+
+  "identity": "[URL][音声検索][キャンセル]",
+
+  "selectors": {
+    "[URL]": "#URL",
+    "[音声検索]": "#VoiceSearchButton",
+    "[テキストを消去]": "#テキストを消去",
+    "[キャンセル]": ""
+
+  }
+
+}

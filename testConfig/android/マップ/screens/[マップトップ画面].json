@@ -1,0 +1,17 @@
+{
+  "key": "[マップトップ画面]",
+
+  "include": [
+    "[マップフッターメニュー(共通)]"
+  ],
+
+  "identity": "[below_search_omnibox_container][スポットタブ][経路タブ][保存済みタブ][投稿タブ][お知らせタブ]",
+
+  "selectors": {
+
+    "[map_frame]": "#map_frame",
+    "[search_omnibox_container]": "#search_omnibox_container",
+    "[below_search_omnibox_container]": "#below_search_omnibox_container"
+  }
+
+}

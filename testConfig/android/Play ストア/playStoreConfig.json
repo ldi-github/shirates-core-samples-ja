@@ -1,0 +1,29 @@
+{
+  "testConfigName": "playStoreConfig",
+
+  "appIconName": "Play ストア",
+
+  "packageOrBundleId": "com.android.vending",
+
+  "startupPackageOrBundleId": "com.android.settings",
+  "startupActivity": "com.android.settings.Settings",
+
+  "dataset": {
+    "apps": "testConfig/android/Play ストア/dataset/apps.json"
+  },
+
+  "screens": {
+    "import": [
+      "testConfig/android/その他/screens"
+    ]
+  },
+
+  "capabilities": {
+    "language": "ja",
+    "locale": "JP"
+  },
+
+  "profiles": [
+  ]
+
+}

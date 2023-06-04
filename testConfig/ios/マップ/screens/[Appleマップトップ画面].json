@@ -1,0 +1,14 @@
+{
+  "key": "[Appleマップトップ画面]",
+
+  "include": [
+  ],
+
+  "identity": "[Application][検索ボックス]",
+
+  "selectors": {
+    "[Application]": ".XCUIElementTypeApplication&&マップ",
+    "[検索ボックス]": "#MapsSearchTextField"
+  }
+
+}

@@ -1,0 +1,21 @@
+{
+  "key": "[開発者向けオプション画面]",
+
+  "include": [
+  ],
+
+  "identity": "~title=開発者向けオプション",
+
+  "selectors": {
+    "[←]": "@上へ移動",
+
+    "[開発者向けオプションの使用バー]": "#switch_bar"
+
+  },
+
+  "scroll": {
+    "start-elements": "",
+    "end-elements": "",
+    "overlay-elements": "[開発者向けオプションの使用バー]"
+  }
+}

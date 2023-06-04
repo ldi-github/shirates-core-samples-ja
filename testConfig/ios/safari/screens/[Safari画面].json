@@ -1,0 +1,14 @@
+{
+  "key": "[Safari画面]",
+
+  "include": [
+  ],
+
+  "identity": "[application]",
+
+  "selectors": {
+    "[application]": ".XCUIElementTypeApplication&&#Safari"
+
+  }
+
+}

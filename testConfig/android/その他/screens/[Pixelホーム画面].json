@@ -1,0 +1,14 @@
+{
+  "key": "[Pixelホーム画面]",
+
+  "include": [
+  ],
+
+  "identity": "[launcher][検索ボックス]",
+
+  "selectors": {
+    "[launcher]": "#launcher",
+    "[検索ボックス]": "@検索"
+  }
+
+}

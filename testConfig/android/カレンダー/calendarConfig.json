@@ -1,0 +1,22 @@
+{
+  "testConfigName": "calendarConfig",
+
+  "appIconName": "カレンダー",
+
+  "packageOrBundleId": "com.google.android.calendar",
+
+  "startupPackageOrBundleId": "com.android.settings",
+  "startupActivity": "com.android.settings.Settings",
+
+  "dataset": {
+    "apps": "testConfig/android/カレンダー/dataset/apps.json"
+  },
+
+  "capabilities": {
+    "language": "ja",
+    "locale": "JP"
+  },
+
+  "profiles": [
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "testConfigName": "stubExampleConfig",
+
+  "stubServerUrl": "http://stub1",
+
+  "appIconName": "設定",
+
+  "packageOrBundleId": "com.android.settings",
+
+  "startupPackageOrBundleId": "com.android.settings",
+  "startupActivity": "com.android.settings.Settings",
+
+  "capabilities": {
+    "language": "ja",
+    "locale": "JP"
+  },
+
+  "profiles": [
+  ]
+
+}

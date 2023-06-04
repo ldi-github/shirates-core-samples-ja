@@ -1,0 +1,15 @@
+{
+  "key": "[ストップウォッチ画面]",
+
+  "include": [
+    "[時計(共通)]"
+  ],
+
+  "identity": "~title=ストップウォッチ",
+
+  "selectors": {
+
+    "[ストップウォッチサークル]": "#stopwatch_circle"
+  }
+
+}

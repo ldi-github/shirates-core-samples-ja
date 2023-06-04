@@ -1,0 +1,14 @@
+{
+  "key": "[Android検索画面]",
+
+  "include": [
+  ],
+
+  "identity": "[googleapp_superg][検索ボックス]",
+
+  "selectors": {
+    "[googleapp_superg]": "#googleapp_superg",
+    "[検索ボックス]": "#googleapp_search_box"
+  }
+
+}

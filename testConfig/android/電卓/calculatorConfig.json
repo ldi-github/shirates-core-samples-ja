@@ -1,0 +1,22 @@
+{
+  "testConfigName": "calculatorConfig",
+
+  "appIconName": "電卓",
+
+  "packageOrBundleId": "com.google.android.calculator",
+
+  "startupPackageOrBundleId": "com.google.android.calculator",
+  "startupActivity": "com.android.calculator2.Calculator",
+
+  "dataset": {
+    "apps": "testConfig/android/電卓/dataset/apps.json"
+  },
+
+  "capabilities": {
+    "language": "ja",
+    "locale": "JP"
+  },
+
+  "profiles": [
+  ]
+}

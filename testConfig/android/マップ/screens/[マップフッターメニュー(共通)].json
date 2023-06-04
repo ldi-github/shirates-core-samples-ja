@@ -1,0 +1,32 @@
+{
+  "key": "[マップフッターメニュー(共通)]",
+
+  "selectors": {
+
+    "[スポットタブ]": "#explore_tab_strip_button",
+    "[スポットタブ(選択状態)]": "#explore_tab_strip_button&&selected=true",
+    "[スポットタブ画像]": "[スポットタブ].png",
+    "[スポットタブ画像(選択状態)]": "[スポットタブ(選択状態)].png",
+
+    "[経路タブ]": "#transportation_tab_strip_button",
+    "[経路タブ(選択状態)]": "#transportation_tab_strip_button&&selected=true",
+    "[経路タブ画像]": "[経路タブ].png",
+    "[経路タブ画像(選択状態)]": "[経路タブ(選択状態)].png",
+
+    "[保存済みタブ]": "#saved_tab_strip_button",
+    "[保存済みタブ(選択状態)]": "#saved_tab_strip_button&&selected=true",
+    "[保存済みタブ画像]": "[保存済みタブ].png",
+    "[保存済みタブ画像(選択状態)]": "[保存済みタブ(選択状態)].png",
+
+    "[投稿タブ]": "#contribute_tab_strip_button",
+    "[投稿タブ(選択状態)]": "#contribute_tab_strip_button&&selected=true",
+    "[投稿タブ画像]": "[投稿タブ].png",
+    "[投稿タブ画像(選択状態)]": "[投稿タブ(選択状態)].png",
+
+    "[お知らせタブ]": "#updates_tab_strip_button",
+    "[お知らせタブ(選択状態)]": "#updates_tab_strip_button&&selected=true",
+    "[お知らせタブ画像]": "[お知らせタブ].png",
+    "[お知らせタブ画像(選択状態)]": "[お知らせタブ(選択状態)].png"
+  }
+
+}

@@ -1,0 +1,67 @@
+{
+  "key": "[エミュレートされたデバイスについて画面]",
+
+  "include": [
+  ],
+
+  "identity": "~title=エミュレートされたデバイスについて",
+
+  "selectors": {
+    "[←]": "@上へ移動",
+
+    "[デバイス名]": "",
+    "{デバイス名}": "[デバイス名]:belowLabel",
+
+    "[Google アカウント]": "",
+    "{Google アカウント}": "[Google アカウント]:belowLabel",
+
+    "[電話番号]": "",
+    "{電話番号}": "[電話番号]:belowLabel",
+
+    "[法律と規制]": "",
+    "[法的情報]": "",
+
+    "[デバイスの詳細]": "",
+
+    "[SIM のステータス]": "",
+    "{SIM のステータス}": "[SIM のステータス]:belowLabel",
+
+    "[モデル]": "",
+    "{モデル}": "[モデル]:belowLabel",
+
+    "[IMEI]": "",
+    "{IMEI}": "[IMEI]:belowLabel",
+
+    "[Android バージョン]": "",
+    "{Android バージョン}": "[Android バージョン]:belowLabel",
+
+    "[デバイス ID]": "",
+
+    "[IP アドレス]": "",
+    "{IP アドレス}": "[IP アドレス]:belowLabel",
+
+    "[Wi-Fi MAC アドレス]": "",
+    "{Wi-Fi MAC アドレス}": "[Wi-Fi MAC アドレス]:belowLabel",
+
+    "[デバイスの Wi‑Fi MAC アドレス]": "",
+    "{デバイスの Wi‑Fi MAC アドレス}": "[デバイスの Wi‑Fi MAC アドレス]:belowLabel",
+
+    "[Bluetoothアドレス]": "",
+    "{Bluetoothアドレス}": "[Bluetoothアドレス]:belowLabel",
+
+    "[稼働時間]": "",
+    "{稼働時間}": "[稼働時間]:belowLabel",
+
+    "[このデバイスについてフィードバックを送信]": "",
+
+    "[ビルド番号]": "",
+    "{ビルド番号}": "[ビルド番号]:belowLabel"
+  },
+
+  "scroll": {
+    "start-elements": "",
+    "end-elements": "{ビルド番号}",
+    "overlay-elements": ""
+  }
+
+}

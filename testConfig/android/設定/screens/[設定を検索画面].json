@@ -1,0 +1,14 @@
+{
+  "key": "[設定を検索画面]",
+
+  "include": [
+  ],
+
+  "identity": "[検索ボックス]",
+
+  "selectors": {
+    "[←]": "@戻る",
+    "[検索ボックス]": "#open_search_view_edit_text",
+    "[X]": "@Clear text"
+  }
+}

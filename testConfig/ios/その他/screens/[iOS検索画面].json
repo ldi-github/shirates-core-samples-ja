@@ -1,0 +1,18 @@
+{
+  "key": "[iOS検索画面]",
+
+  "include": [
+  ],
+
+  "identity": "[Spotlight検索フィールド]",
+
+  "selectors": {
+    "[Siriからの提案]": "",
+
+    "[Spotlight検索フィールド]": "#SpotlightSearchField",
+    "[音声入力]": "#音声入力",
+    "[テキストを消去]": "#テキストを消去"
+
+  }
+
+}

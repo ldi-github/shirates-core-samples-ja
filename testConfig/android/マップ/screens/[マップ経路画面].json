@@ -1,0 +1,17 @@
+{
+  "key": "[マップ経路画面]",
+
+  "include": [
+    "[マップフッターメニュー(共通)]"
+  ],
+
+  "identity": "[search_omnibox_container not exist][スポットタブ][経路タブ][保存済みタブ][投稿タブ][お知らせタブ]",
+
+  "selectors": {
+
+    "[map_frame]": "#map_frame",
+    "[search_omnibox_container not exist]": "!#search_omnibox_container",
+    "[below_search_omnibox_container]": "#below_search_omnibox_container"
+  }
+
+}

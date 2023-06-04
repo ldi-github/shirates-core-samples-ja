@@ -1,0 +1,17 @@
+{
+  "[電卓]": {
+    "packageOrBundleId": "com.google.android.calculator"
+  },
+  "[カレンダー]": {
+    "packageOrBundleId": "com.google.android.calendar"
+  },
+  "[Chrome]": {
+    "packageOrBundleId": "com.android.chrome"
+  },
+  "[マップ]": {
+    "packageOrBundleId": "com.google.android.apps.maps"
+  },
+  "[時計]": {
+    "packageOrBundleId": "com.google.android.deskclock"
+  }
+}
