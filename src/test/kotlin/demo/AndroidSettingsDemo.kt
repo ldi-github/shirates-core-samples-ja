@@ -22,7 +22,6 @@ class AndroidSettingsDemo : UITest() {
                     it.screenIs("[ネットワークとインターネット画面]")
                 }
             }
-
             case(2) {
                 condition {
                     it.select("{機内モードスイッチ}")
@@ -34,7 +33,6 @@ class AndroidSettingsDemo : UITest() {
                         .checkIsON()
                 }
             }
-
             case(3) {
                 action {
                     it.tap("{機内モードスイッチ}")

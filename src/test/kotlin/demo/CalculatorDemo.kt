@@ -34,7 +34,6 @@ class CalculatorDemo : UITest() {
                         .textIs("123")
                 }
             }
-
             case(2) {
                 action {
                     it.tap("[+]")
@@ -43,7 +42,6 @@ class CalculatorDemo : UITest() {
                         .textIs("123+")
                 }
             }
-
             case(3) {
                 action {
                     it
@@ -57,7 +55,6 @@ class CalculatorDemo : UITest() {
                         .textIs("579")
                 }
             }
-
             case(4) {
                 action {
                     it.tap("[=]")

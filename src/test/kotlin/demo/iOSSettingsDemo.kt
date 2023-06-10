@@ -27,7 +27,6 @@ class iOSSettingsDemo : UITest() {
                     it.screenIs("[デベロッパ画面]")
                 }
             }
-
             case(2) {
                 expectation {
                     it.existWithScrollDown("次回起動時にローカルデータをリセット")
