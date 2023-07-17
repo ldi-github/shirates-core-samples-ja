@@ -20,8 +20,8 @@ class iOSPressKey1_ja : UITest() {
                     it.macro("[iOS検索画面]")
                     it.select("[Spotlight検索フィールド]")
                         .clearInput()
-                        .sendKeys("safa")
-                        .tap("Safari")
+                        .sendKeys("safari")
+                        .tap("safari")
                         .wait()
                         .appIs("Safari")
                 }.action {

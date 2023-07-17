@@ -8,12 +8,12 @@ import shirates.core.macro.MacroObject
 @MacroObject
 object SafariMacro {
 
-    @Macro("[Safari Screen]")
+    @Macro("[Safari画面]")
     fun safariScreen() {
 
         it.refreshCache()
 
-        if (it.isScreen("[Safari Screen]")) {
+        if (it.isScreen("[Safari画面]")) {
             return
         }
 
@@ -21,28 +21,7 @@ object SafariMacro {
         if (it.canSelect("Cancel")) {
             it.tap()
         }
-        it.screenIs("[Safari Screen]")
+        it.screenIs("[Safari画面]")
     }
 
-    @Macro("[Safari Search Screen]")
-    fun safariSearchScreen() {
-
-        it.refreshCache()
-
-        if (it.isScreen("[Safari Search Screen]")) {
-            return
-        }
-
-        safariScreen()
-
-        if (it.isScreen("[Safari Search Screen]")) {
-            return
-        }
-
-        it.tap("[Address]")
-        if (it.canSelect("[Clear text]")) {
-            it.tap()
-        }
-        it.screenIs("[Safari Search Screen]")
-    }
 }
