@@ -5,17 +5,19 @@ import org.junit.jupiter.api.Test
 import shirates.core.configuration.Testrun
 import shirates.core.driver.commandextension.*
 import shirates.core.testcode.UITest
+import shirates.helper.ImageSetupHelper
 
 @Testrun("testConfig/android/マップ/testrun.properties")
 class AssertingImage1_ja : UITest() {
 
-    /**
-     * Note:
-     *
-     * Run CroppingImages1.kt(tutorial.inaction.CroppingImages1)
-     * before running this sample
-     * to set up template image files.
-     */
+    @Test
+    @Order(0)
+    fun setupImage() {
+
+        scenario {
+            ImageSetupHelper.SetupImagesMapsTopScreen()
+        }
+    }
 
     @Test
     @Order(10)
@@ -26,8 +28,8 @@ class AssertingImage1_ja : UITest() {
                 condition {
                     it.macro("[マップトップ画面]")
                 }.expectation {
-                    it.select("[スポットタブ]").imageIs("[スポットタブ画像(選択状態)]")     // OK
-                    it.select("[スポットタブ]").isImage("[スポットタブ画像(選択状態)]").thisIsTrue()      // OK
+                    it.select("[スポットタブ]").imageIs("[スポットタブ(選択状態)]")     // OK
+                    it.select("[スポットタブ]").isImage("[スポットタブ(選択状態)]").thisIsTrue()      // OK
                 }
             }
         }
@@ -42,7 +44,7 @@ class AssertingImage1_ja : UITest() {
                 condition {
                     it.macro("[マップトップ画面]")
                 }.expectation {
-                    it.select("[経路タブ]").imageIs("[経路タブ画像(選択状態)]")     // NG
+                    it.select("[経路タブ]").imageIs("[経路タブ(選択状態)]")     // NG
                 }
             }
         }
@@ -57,55 +59,55 @@ class AssertingImage1_ja : UITest() {
                 condition {
                     it.macro("[マップトップ画面]")
                 }.expectation {
-                    it.select("[スポットタブ]").imageIs("[スポットタブ画像(選択状態)]")
-                    it.select("[経路タブ]").imageIs("[経路タブ画像]")
-                    it.select("[保存済みタブ]").imageIs("[保存済みタブ画像]")
-                    it.select("[投稿タブ]").imageIs("[投稿タブ画像]")
-                    it.select("[お知らせタブ]").imageIs("[お知らせタブ画像]")
+                    it.select("[スポットタブ]").imageIs("[スポットタブ(選択状態)]")
+                    it.select("[経路タブ]").imageIs("[経路タブ]")
+                    it.select("[保存済みタブ]").imageIs("[保存済みタブ]")
+                    it.select("[投稿タブ]").imageIs("[投稿タブ]")
+                    it.select("[お知らせタブ]").imageIs("[お知らせタブ]")
                 }
             }
             case(2) {
                 action {
                     it.tap("[経路タブ]")
                 }.expectation {
-                    it.select("[スポットタブ]").imageIs("[スポットタブ画像]")
-                    it.select("[経路タブ]").imageIs("[経路タブ画像(選択状態)]")
-                    it.select("[保存済みタブ]").imageIs("[保存済みタブ画像]")
-                    it.select("[投稿タブ]").imageIs("[投稿タブ画像]")
-                    it.select("[お知らせタブ]").imageIs("[お知らせタブ画像]")
+                    it.select("[スポットタブ]").imageIs("[スポットタブ]")
+                    it.select("[経路タブ]").imageIs("[経路タブ(選択状態)]")
+                    it.select("[保存済みタブ]").imageIs("[保存済みタブ]")
+                    it.select("[投稿タブ]").imageIs("[投稿タブ]")
+                    it.select("[お知らせタブ]").imageIs("[お知らせタブ]")
                 }
             }
             case(3) {
                 action {
                     it.tap("[保存済みタブ]")
                 }.expectation {
-                    it.select("[スポットタブ]").imageIs("[スポットタブ画像]")
-                    it.select("[経路タブ]").imageIs("[経路タブ画像]")
-                    it.select("[保存済みタブ]").imageIs("[保存済みタブ画像(選択状態)]")
-                    it.select("[投稿タブ]").imageIs("[投稿タブ画像]")
-                    it.select("[お知らせタブ]").imageIs("[お知らせタブ画像]")
+                    it.select("[スポットタブ]").imageIs("[スポットタブ]")
+                    it.select("[経路タブ]").imageIs("[経路タブ]")
+                    it.select("[保存済みタブ]").imageIs("[保存済みタブ(選択状態)]")
+                    it.select("[投稿タブ]").imageIs("[投稿タブ]")
+                    it.select("[お知らせタブ]").imageIs("[お知らせタブ]")
                 }
             }
             case(4) {
                 action {
                     it.tap("[投稿タブ]")
                 }.expectation {
-                    it.select("[スポットタブ]").imageIs("[スポットタブ画像]")
-                    it.select("[経路タブ]").imageIs("[経路タブ画像]")
-                    it.select("[保存済みタブ]").imageIs("[保存済みタブ画像]")
-                    it.select("[投稿タブ]").imageIs("[投稿タブ画像(選択状態)]")
-                    it.select("[お知らせタブ]").imageIs("[お知らせタブ画像]")
+                    it.select("[スポットタブ]").imageIs("[スポットタブ]")
+                    it.select("[経路タブ]").imageIs("[経路タブ]")
+                    it.select("[保存済みタブ]").imageIs("[保存済みタブ]")
+                    it.select("[投稿タブ]").imageIs("[投稿タブ(選択状態)]")
+                    it.select("[お知らせタブ]").imageIs("[お知らせタブ]")
                 }
             }
             case(5) {
                 action {
                     it.tap("[お知らせタブ]")
                 }.expectation {
-                    it.select("[スポットタブ]").imageIs("[スポットタブ画像]")
-                    it.select("[経路タブ]").imageIs("[経路タブ画像]")
-                    it.select("[保存済みタブ]").imageIs("[保存済みタブ画像]")
-                    it.select("[投稿タブ]").imageIs("[投稿タブ画像]")
-                    it.select("[お知らせタブ]").imageIs("[お知らせタブ画像(選択状態)]")
+                    it.select("[スポットタブ]").imageIs("[スポットタブ]")
+                    it.select("[経路タブ]").imageIs("[経路タブ]")
+                    it.select("[保存済みタブ]").imageIs("[保存済みタブ]")
+                    it.select("[投稿タブ]").imageIs("[投稿タブ]")
+                    it.select("[お知らせタブ]").imageIs("[お知らせタブ(選択状態)]")
                 }
             }
         }

@@ -52,11 +52,11 @@ class LaunchApp2_ja : UITest() {
             }
             case(5) {
                 condition {
-                    it.terminateApp("[フリーボード]")
+                    it.terminateApp("[マップ]")
                 }.action {
-                    it.launchApp("[フリーボード]")
+                    it.launchApp("[マップ]")
                 }.expectation {
-                    it.appIs("[フリーボード]")
+                    it.appIs("[マップ]")
                 }
             }
         }

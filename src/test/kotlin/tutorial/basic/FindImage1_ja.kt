@@ -1,22 +1,30 @@
 package tutorial.basic
 
+import org.junit.jupiter.api.Order
 import org.junit.jupiter.api.Test
 import shirates.core.configuration.Testrun
 import shirates.core.driver.commandextension.*
 import shirates.core.testcode.UITest
+import shirates.helper.ImageSetupHelper
 
-@Testrun("unittestConfig/android/設定/testrun.properties")
+@Testrun("testConfig/android/設定/testrun.properties")
 class FindImage1_ja : UITest() {
 
-    /**
-     * 注意:
-     *
-     * このサンプルを実行する前に
-     * CroppingImages2.kt(tutorial.inaction.CroppingImages2)を実行して
-     * テンプレート画像ファイルをセットアップしてください。
-     */
+    @Test
+    @Order(10)
+    fun croppingImages() {
+
+        scenario {
+            /**
+             * Android設定トップ画面のアイコンをキャプチャして以下のディレクトリへ格納します。
+             * testConfig/android/設定/screens/images/Android設定トップ画面
+             */
+            ImageSetupHelper.setupImageAndroidSettingsTopScreen()
+        }
+    }
 
     @Test
+    @Order(20)
     fun findImage() {
 
         scenario {
@@ -24,17 +32,25 @@ class FindImage1_ja : UITest() {
                 condition {
                     it.macro("[Android設定トップ画面]")
                 }.action {
-                    it.findImage("[ネットワークとインターネット].png")
-                    it.findImageWithScrollDown("[ディスプレイ].png")
-                    it.findImageWithScrollDown("[ヒントとサポート].png")
-                    it.findImageWithScrollUp("[ディスプレイ].png")
-                    it.findImageWithScrollUp("[ネットワークとインターネット].png")
+                    withScrollDown {
+                        it.findImage("[ネットワークとインターネットアイコン].png")
+                        it.findImage("[ディスプレイアイコン].png")
+                        it.findImage("[ヒントとサポートアイコン].png")
+                    }
+                    withScrollUp {
+                        it.findImage("[ディスプレイアイコン].png")
+                        it.findImage("[ネットワークとインターネットアイコン].png")
+                    }
                 }.expectation {
-                    it.exist("[ネットワークとインターネット].png")
-                    it.existWithScrollDown("[ディスプレイ].png")
-                    it.existWithScrollDown("[ヒントとサポート].png")
-                    it.existWithScrollUp("[ディスプレイ].png")
-                    it.existWithScrollUp("[ネットワークとインターネット].png")
+                    withScrollDown {
+                        it.existImage("[ネットワークとインターネットアイコン].png")
+                        it.existImage("[ディスプレイアイコン].png")
+                        it.existImage("[ヒントとサポートアイコン].png")
+                    }
+                    withScrollUp {
+                        it.existImage("[ディスプレイアイコン].png")
+                        it.existImage("[ネットワークとインターネットアイコン].png")
+                    }
                 }
             }
         }

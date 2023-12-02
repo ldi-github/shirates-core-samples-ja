@@ -8,7 +8,7 @@ import shirates.core.driver.commandextension.describe
 import shirates.core.driver.commandextension.screenIs
 import shirates.core.testcode.UITest
 
-@Testrun("unitTestConfig/ios/iOSSettings/testrun.properties")
+@Testrun("testConfig/ios/設定/testrun.properties")
 class BranchFunctions2_ja : UITest() {
 
     @Test

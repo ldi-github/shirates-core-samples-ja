@@ -98,7 +98,6 @@ object AndroidSettingsMacro : TestDrive {
 
         androidSettingsTopScreen()
         it.tapWithScrollDown("壁紙とスタイル")
-            .tap("壁紙の変更")
             .screenIs("[壁紙画面]")
     }
 

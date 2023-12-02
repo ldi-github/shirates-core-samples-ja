@@ -7,6 +7,7 @@ import shirates.core.driver.commandextension.output
 import shirates.core.driver.commandextension.tap
 import shirates.core.driver.commandextension.textIs
 import shirates.core.driver.commandextension.textIsNot
+import shirates.core.driver.platformMajorVersion
 import shirates.core.driver.platformVersion
 import shirates.core.testcode.UITest
 
@@ -21,7 +22,7 @@ class SkipAndNotImpl1_ja : UITest() {
             case(1) {
                 condition {
                     output("platformVersion=$platformVersion")
-                    if ((platformVersion.toIntOrNull() ?: 0) > 5) {
+                    if (platformMajorVersion > 5) {
                         SKIP_CASE("case(1) がスキップされました")   // Skip execution of commands (log only)
                     }
                 }.action {
@@ -49,7 +50,7 @@ class SkipAndNotImpl1_ja : UITest() {
             case(1) {
                 condition {
                     output("platformVersion=$platformVersion")
-                    if ((platformVersion.toIntOrNull() ?: 0) > 5) {
+                    if (platformMajorVersion > 5) {
                         SKIP_SCENARIO()     // Skip execution of commands (log only)
                     }
                 }.action {

@@ -54,11 +54,11 @@ class LaunchApp1_ja : UITest() {
             }
             case(5) {
                 condition {
-                    it.terminateApp("[Play Store]")     // app.json の App Nickname を参照
+                    it.terminateApp("[Play ストア]")     // app.json の App Nickname を参照
                 }.action {
-                    it.launchApp("[Play Store]")
+                    it.launchApp("[Play ストア]")
                 }.expectation {
-                    it.appIs("[Play Store]")
+                    it.appIs("[Play ストア]")
                 }
             }
         }

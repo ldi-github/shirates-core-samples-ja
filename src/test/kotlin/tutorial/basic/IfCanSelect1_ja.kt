@@ -27,7 +27,7 @@ class IfCanSelect1_ja : UITest() {
                         NG()
                     }
 
-                    ifCanSelectNot("[System]") {
+                    ifCanSelectNot("[システム]") {
                         OK("ifCanSelectNot が呼ばれました")
                     }.ifElse {
                         NG()

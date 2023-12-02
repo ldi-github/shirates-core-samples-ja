@@ -28,7 +28,7 @@ object CalendarMacro : TestDrive {
         }
     }
 
-    @Macro("[カレンダ週ー週画面]")
+    @Macro("[カレンダー週画面]")
     fun calendarWeekScreen() {
 
         it.restartApp()

@@ -3,25 +3,27 @@ package tutorial.basic
 import org.junit.jupiter.api.Order
 import org.junit.jupiter.api.Test
 import shirates.core.configuration.Testrun
-import shirates.core.driver.commandextension.dontExist
-import shirates.core.driver.commandextension.exist
+import shirates.core.driver.commandextension.dontExistImage
+import shirates.core.driver.commandextension.existImage
 import shirates.core.driver.commandextension.macro
 import shirates.core.testcode.UITest
+import shirates.helper.ImageSetupHelper
 
 @Testrun("testConfig/android/マップ/testrun.properties")
 class ExistDontExist2_ja : UITest() {
 
-    /**
-     * Note:
-     *
-     * Run CroppingImages1.kt(tutorial.inaction.CroppingImages1)
-     * before running this sample
-     * to set up template image files.
-     */
+    @Test
+    @Order(0)
+    fun setupImage() {
+
+        scenario {
+            ImageSetupHelper.SetupImagesMapsTopScreen()
+        }
+    }
 
     @Test
     @Order(10)
-    fun exist_image_OK() {
+    fun existImage_OK() {
 
         scenario {
             case(1) {
@@ -29,20 +31,20 @@ class ExistDontExist2_ja : UITest() {
                     it.macro("[マップトップ画面]")
                 }.expectation {
                     it
-                        .exist("[スポットタブ(選択状態)]")
-                        .dontExist("[スポットタブ画像]")
+                        .existImage("[スポットタブ(選択状態)]")
+                        .dontExistImage("[スポットタブ]")
 
-                        .exist("[経路タブ]")
-                        .dontExist("[経路タブ(選択状態)]")
+                        .existImage("[経路タブ]")
+                        .dontExistImage("[経路タブ(選択状態)]")
 
-                        .exist("[保存済みタブ画像]")
-                        .dontExist("[保存済みタブ画像(選択状態)]")
+                        .existImage("[保存済みタブ]")
+                        .dontExistImage("[保存済みタブ(選択状態)]")
 
-                        .exist("[投稿タブ画像]")
-                        .dontExist("[投稿タブ画像(選択状態)]")
+                        .existImage("[投稿タブ]")
+                        .dontExistImage("[投稿タブ(選択状態)]")
 
-                        .exist("[お知らせタブ画像]")
-                        .dontExist("[お知らせタブ画像(選択状態)]")
+                        .existImage("[お知らせタブ]")
+                        .dontExistImage("[お知らせタブ(選択状態)]")
                 }
             }
         }
@@ -51,16 +53,14 @@ class ExistDontExist2_ja : UITest() {
 
     @Test
     @Order(20)
-    fun exist_image_NG() {
+    fun existImage_WARN() {
 
         scenario {
             case(1) {
                 condition {
                     it.macro("[マップトップ画面]")
                 }.expectation {
-                    it
-                        .dontExist("[スポットタブ画像]")   // OK
-                        .exist("[スポットタブ画像]")   // NG
+                    it.existImage("[スポットタブ]")   // WARN
                 }
             }
         }
@@ -68,16 +68,44 @@ class ExistDontExist2_ja : UITest() {
 
     @Test
     @Order(30)
-    fun dont_exist_image_NG() {
+    fun existImage_NG() {
 
         scenario {
             case(1) {
                 condition {
                     it.macro("[マップトップ画面]")
                 }.expectation {
-                    it
-                        .exist("[スポットタブ(選択状態)]")     // OK
-                        .dontExist("[スポットタブ(選択状態)]") // NG
+                    it.existImage("[スポットタブ]", throwsException = true)   // NG
+                }
+            }
+        }
+    }
+
+    @Test
+    @Order(40)
+    fun dontExistImage_OK() {
+
+        scenario {
+            case(1) {
+                condition {
+                    it.macro("[マップトップ画面]")
+                }.expectation {
+                    it.dontExistImage("[スポットタブ]")     // OK
+                }
+            }
+        }
+    }
+
+    @Test
+    @Order(50)
+    fun dontExistImage_NG() {
+
+        scenario {
+            case(1) {
+                condition {
+                    it.macro("[マップトップ画面]")
+                }.expectation {
+                    it.dontExistImage("[スポットタブ(選択状態)]") // NG
                 }
             }
         }

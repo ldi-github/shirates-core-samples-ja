@@ -2,7 +2,12 @@
   "key": "[Android設定トップ画面]",
 
   "identity": "#recycler_view",
-  "satellites": ["バッテリー", "ユーザー補助", "パスワードとアカウント", "ヒントとサポート"],
+  "satellites": [
+    "バッテリー",
+    "ユーザー補助",
+    "パスワードとアカウント",
+    "ヒントとサポート"
+  ],
 
   "selectors": {
     "[アカウントアバター]": "#account_avatar",
@@ -95,7 +100,7 @@
   },
 
   "scroll": {
-    "start-elements": "[ネットワークとインターネット]",
+    "start-elements": "[アカウントアバター]",
     "end-elements": "{ヒントとサポート}",
     "overlay-elements": "[検索ボタン][設定を検索]"
   }

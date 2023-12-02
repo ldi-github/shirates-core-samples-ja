@@ -4,14 +4,14 @@ import shirates.core.driver.TestDrive
 import shirates.core.driver.branchextension.android
 import shirates.core.driver.branchextension.ifStringIs
 import shirates.core.driver.commandextension.*
-import shirates.core.driver.platformVersion
-import shirates.core.driver.viewport
+import shirates.core.driver.platformMajorVersion
+import shirates.core.driver.rootBounds
 import shirates.core.exception.TestConfigException
 import shirates.core.macro.Macro
 import shirates.core.macro.MacroObject
 
 @MacroObject
-object AndroidMacro: TestDrive {
+object AndroidMacro : TestDrive {
 
     @Macro("[Androidホーム画面]")
     fun androidHomeScreen() {
@@ -30,16 +30,16 @@ object AndroidMacro: TestDrive {
                 startX = 20,
                 startY = 10,
                 endX = 20,
-                endY = viewport.bottom
+                endY = rootBounds.bottom
             )
-            if ((platformVersion.toIntOrNull() ?: 0) < 12) {
+            if (platformMajorVersion < 12) {
                 throw TestConfigException("Android 12以上を使用してください。")
             }
             it.swipePointToPoint(
                 startX = 20,
                 startY = 10,
                 endX = 20,
-                endY = viewport.bottom
+                endY = rootBounds.bottom
             )
             it.select("@機内モード")
                 .text
@@ -62,16 +62,16 @@ object AndroidMacro: TestDrive {
                 startX = 20,
                 startY = 10,
                 endX = 20,
-                endY = viewport.bottom
+                endY = rootBounds.bottom
             )
-            if ((platformVersion.toIntOrNull() ?: 0) < 12) {
+            if (platformMajorVersion < 12) {
                 throw TestConfigException("Use android 12 or greater")
             }
             it.swipePointToPoint(
                 startX = 20,
                 startY = 10,
                 endX = 20,
-                endY = viewport.bottom
+                endY = rootBounds.bottom
             )
 
             it.select("@機内モード")

@@ -4,8 +4,8 @@ import org.junit.jupiter.api.Order
 import org.junit.jupiter.api.Test
 import shirates.core.configuration.Testrun
 import shirates.core.driver.commandextension.*
+import shirates.core.driver.rootBounds
 import shirates.core.driver.scrollFrame
-import shirates.core.driver.viewport
 import shirates.core.testcode.UITest
 
 @Testrun("testConfig/android/設定/testrun.properties")
@@ -50,10 +50,11 @@ class Swipe1_ja : UITest() {
                         .output("scrollFrame: ${it.scrollFrame}")
                 }.action {
                     it.select("[バッテリー]")
-                        .swipeToCenter()
-                        .swipeToTop(durationSeconds = 10.0)
+                        .swipeToCenterOfScreen()
+                        .swipeToTopOfScreen(durationSeconds = 10.0)
                 }.expectation {
                     it.dontExist("[通知]")
+                        .exist("[ストレージ]")
                 }
             }
             case(2) {
@@ -62,9 +63,10 @@ class Swipe1_ja : UITest() {
                         .exist("[プライバシー]")
                 }.action {
                     it.select("[セキュリティ]")
-                        .swipeToBottom(durationSeconds = 10.0)
+                        .swipeToBottomOfScreen(durationSeconds = 10.0)
                 }.expectation {
-                    it.dontExist("[プライバシー]")
+                    it.exist("[セキュリティ]")
+                        .dontExist("[プライバシー]")
                 }
             }
         }
@@ -80,10 +82,10 @@ class Swipe1_ja : UITest() {
                     it.macro("[Android設定トップ画面]")
                 }.action {
                     it.swipePointToPoint(
-                        startX = viewport.centerX,
-                        startY = viewport.centerY,
-                        endX = viewport.centerX,
-                        endY = viewport.top
+                        startX = rootBounds.centerX,
+                        startY = rootBounds.centerY,
+                        endX = rootBounds.centerX,
+                        endY = rootBounds.top
                     )
                 }.expectation {
 
@@ -93,10 +95,10 @@ class Swipe1_ja : UITest() {
             case(2) {
                 action {
                     it.swipePointToPoint(
-                        startX = viewport.centerX,
-                        startY = viewport.centerY,
-                        endX = viewport.centerX,
-                        endY = viewport.bottom,
+                        startX = rootBounds.centerX,
+                        startY = rootBounds.centerY,
+                        endX = rootBounds.centerX,
+                        endY = rootBounds.bottom,
                         durationSeconds = 0.2
                     )
                 }.expectation {
@@ -284,7 +286,7 @@ class Swipe1_ja : UITest() {
             case(2) {
                 action {
                     it.select("メッセージ")
-                        .swipeHorizontalTo(viewport.right)
+                        .swipeHorizontalTo(rootBounds.right)
                 }.expectation {
                 }
             }
