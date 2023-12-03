@@ -2,11 +2,8 @@ package macro.android
 
 import shirates.core.driver.TestDrive
 import shirates.core.driver.branchextension.android
-import shirates.core.driver.branchextension.ifStringIs
 import shirates.core.driver.commandextension.*
 import shirates.core.driver.platformMajorVersion
-import shirates.core.driver.rootBounds
-import shirates.core.exception.TestConfigException
 import shirates.core.macro.Macro
 import shirates.core.macro.MacroObject
 
@@ -26,29 +23,21 @@ object AndroidMacro : TestDrive {
         android {
             it.pressHome()
                 .pressHome()
-            it.swipePointToPoint(
-                startX = 20,
-                startY = 10,
-                endX = 20,
-                endY = rootBounds.bottom
-            )
-            if (platformMajorVersion < 12) {
-                throw TestConfigException("Android 12以上を使用してください。")
+            it.flickTopToBottom(startMarginRatio = 0.0)
+                .flickTopToBottom()
+
+            if (platformMajorVersion == 11) {
+                it.select("#quick_settings_container")
+                    .flickCenterToLeft()
             }
-            it.swipePointToPoint(
-                startX = 20,
-                startY = 10,
-                endX = 20,
-                endY = rootBounds.bottom
-            )
-            it.select("@機内モード")
-                .text
-                .ifStringIs("OFF") {
+
+            if (canSelect("@機内モード")) {
+                if (it.isChecked.not()) {
                     it.tap()
                 }
-            it.select("@機内モード")
-                .textIs("ON")
-            it.pressHome()
+                it.select("@機内モード")
+                    .checkIsON()
+            }
         }
     }
 
@@ -58,32 +47,22 @@ object AndroidMacro : TestDrive {
         android {
             it.pressHome()
                 .pressHome()
-            it.swipePointToPoint(
-                startX = 20,
-                startY = 10,
-                endX = 20,
-                endY = rootBounds.bottom
-            )
-            if (platformMajorVersion < 12) {
-                throw TestConfigException("Use android 12 or greater")
-            }
-            it.swipePointToPoint(
-                startX = 20,
-                startY = 10,
-                endX = 20,
-                endY = rootBounds.bottom
-            )
+            it.flickTopToBottom(startMarginRatio = 0.0)
+                .flickTopToBottom()
 
-            it.select("@機内モード")
-                .text
-                .ifStringIs("ON") {
+            if (platformMajorVersion == 11) {
+                it.select("#quick_settings_container")
+                    .flickCenterToLeft()
+            }
+
+            if (canSelect("@機内モード")) {
+                if (it.isChecked) {
                     it.tap()
                 }
-            it.select("@機内モード")
-                .textIs("OFF")
-            it.pressHome()
+                it.select("@機内モード")
+                    .checkIsOFF()
+            }
         }
-
     }
 
 }
