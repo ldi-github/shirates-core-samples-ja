@@ -77,4 +77,25 @@ object iOSSettingsMacro {
         it.tapWithScrollDown("キーボード")
             .screenIs("[キーボード画面]")
     }
+
+    @Macro("[言語と地域画面]")
+    fun languageAndRegionScreen() {
+
+        it.refreshCache()
+
+        if (it.isScreen("[言語と地域画面]")) {
+            if (it.canSelect(".XCUIElementTypeOther&&優先する言語")) {
+                return
+            }
+            it.flickTopToBottom()
+            if (it.canSelect(".XCUIElementTypeOther&&優先する言語")) {
+                return
+            }
+        }
+
+        settingsGeneralScreen()
+        it.tap("一般")
+        it.tap("言語と地域")
+            .screenIs("[言語と地域画面]")
+    }
 }

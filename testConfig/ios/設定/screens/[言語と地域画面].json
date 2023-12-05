@@ -1,0 +1,22 @@
+{
+  "key": "[言語と地域画面]",
+
+  "include": [
+  ],
+
+  "identity": "~title=言語と地域",
+  "weight": "100",
+
+  "selectors": {
+    "[<一般]": "一般&&.XCUIElementTypeButton",
+    "[言語と地域]": "",
+    "[編集]": "",
+    "[NavigationBar]": ".XCUIElementTypeNavigationBar"
+
+  },
+
+  "scroll": {
+    "header-elements": "[NavigationBar]"
+  }
+
+}
