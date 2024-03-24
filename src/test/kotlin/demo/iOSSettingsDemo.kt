@@ -18,6 +18,7 @@ class iOSSettingsDemo : UITest() {
         scenario {
             case(1) {
                 condition {
+                    it.terminateApp()
                     it.pressHome()
                         .launchApp()
                         .screenIs("[iOS設定トップ画面]")

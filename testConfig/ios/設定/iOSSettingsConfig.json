@@ -21,82 +21,18 @@
   },
 
   "capabilities": {
-    "useJSONSource": true,
-    "appium:showXcodeLog": true,
-    "bundleId": "com.apple.Preferences",
-    "language": "ja",
-    "locale": "JP"
+    "bundleId": "com.apple.Preferences"
   },
 
   "profiles": [
     {
-      "profileName": "iOS *",
+      "profileName": "remote server",
       "capabilities": {
-      }
-    },
-    {
-      "profileName": "iOS 16.1",
-      "capabilities": {
-        "platformVersion": "16.1"
-      }
-    },
-    {
-      "profileName": "iOS 15.5",
-      "capabilities": {
-        "platformVersion": "15.5"
-      }
-    },
-    {
-      "profileName": "iOS udid",
-      "capabilities": {
-        "udid": "50AC15AE-078B-4022-BB1B-7A541B7D47B4"
-      }
-    },
-    {
-      "profileName": "iOS iPhone 13",
-      "capabilities": {
-        "deviceName": "iPhone 13"
-      }
-    },
-
-    {
-      "profileName": "iPhone 14(16.1)",
-      "capabilities": {
-        "platformVersion": "16.1",
-        "deviceName": "iPhone 14"
-      }
-    },
-    {
-      "profileName": "iPhone 13(15.5)",
-      "capabilities": {
-        "platformVersion": "15.5",
-        "deviceName": "iPhone 13"
-      }
-    },
-    {
-      "profileName": "iPhone 13(15.0)",
-      "capabilities": {
-        "platformVersion": "15.0",
-        "deviceName": "iPhone 13"
-      }
-    },
-    {
-      "profileName": "iPhone 12 Pro(14.3)",
-      "capabilities": {
-        "platformVersion": "14.3",
-        "deviceName": "iPhone 12 Pro"
-      }
-    },
-    {
-      "profileName": "real device",
-      "capabilities": {
-        "platformVersion": "14.4.1",
-        "deviceName": "",
-        "udid": "",
-        "xcodeOrgId": "",
-        "xcodeSigningId": "iPhone Developer"
+        "automationName": "XCUITest",
+        "platformName": "iOS",
+        "deviceName": "iPhone 15(iOS 17.2)"
       }
     }
-
   ]
+
 }
