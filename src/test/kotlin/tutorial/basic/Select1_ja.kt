@@ -51,4 +51,21 @@ class Select1_ja : UITest() {
         }
     }
 
+    @Test
+    @Order(30)
+    fun selectWithScrollAndSwipeToCenter() {
+
+        scenario {
+            case(1) {
+                action {
+                    it.selectWithScrollDown("プライバシー")
+                }
+            }
+            case(2) {
+                action {
+                    it.selectWithScrollUp("通知")
+                }
+            }
+        }
+    }
 }
