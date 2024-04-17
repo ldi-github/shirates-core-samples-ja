@@ -6,6 +6,7 @@ import shirates.core.configuration.Testrun
 import shirates.core.driver.DisableCache
 import shirates.core.driver.commandextension.*
 import shirates.core.driver.testContext
+import shirates.core.testcode.NoLoadRun
 import shirates.core.testcode.UITest
 import shirates.core.utility.time.StopWatch
 
@@ -77,6 +78,7 @@ class DirectAccessModeIos_ja : UITest() {
         }
     }
 
+    @NoLoadRun
     @Test
     @Order(40)
     fun performanceComparison() {

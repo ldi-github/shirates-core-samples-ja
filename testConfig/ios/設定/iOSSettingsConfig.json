@@ -16,7 +16,8 @@
       "testConfig/ios/マップ/screens",
       "testConfig/ios/その他/screens",
       "testConfig/ios/リマインダー/screens",
-      "testConfig/ios/safari/screens"
+      "testConfig/ios/safari/screens",
+      "testConfig/ios/News/screens"
     ]
   },
 

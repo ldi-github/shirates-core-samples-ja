@@ -16,38 +16,24 @@ class RelativeCommand1_ja : UITest() {
         scenario {
             case(1) {
                 condition {
-                    it.macro("[壁紙画面]")
+                    it.macro("[壁紙とスタイル画面]")
                 }.expectation {
-                    it.exist("都市景観")
-                        .relative(":right").textIs("暮らし")
-                    it.select("都市景観")
-                        .relative(":right(2)").textIs("テクスチャ")
-                    it.select("都市景観")
-                        .relative(":right(100)").thisIsEmpty()
-                    it.select("都市景観")
+                    it.exist("ロック画面")
+                        .relative(":right").textIs("ホーム画面")
+                    it.select("ロック画面")
+                        .relative(":right(2)").thisIsEmpty()
+                    it.select("ロック画面")
                         .relative(":belowImage").classIs("android.widget.ImageView")
                 }
             }
             case(2) {
                 expectation {
-                    it.exist("都市景観")
-                        .right().textIs("暮らし")
-                    it.select("都市景観")
-                        .right(2).textIs("テクスチャ")
-                    it.select("都市景観")
-                        .right(100).thisIsEmpty()
-                    it.select("都市景観")
+                    it.exist("ロック画面")
+                        .right().textIs("ホーム画面")
+                    it.select("ロック画面")
+                        .right(2).thisIsEmpty()
+                    it.select("ロック画面")
                         .belowImage().classIs("android.widget.ImageView")
-                }
-            }
-            case(3) {
-                expectation {
-                    it.exist("都市景観") {
-                        right().textIs("暮らし")
-                        right(2).textIs("テクスチャ")
-                        right(100).thisIsEmpty()
-                        aboveImage().classIs("android.widget.ImageView")
-                    }
                 }
             }
         }
@@ -65,7 +51,7 @@ class RelativeCommand1_ja : UITest() {
                     it.exist("ネットワークとインターネット")
                         .relative(":flow").textIs("モバイル、Wi-Fi、アクセス ポイント")
                         .relative(":flow").classIs("android.widget.ImageView")
-                        .relative(":flow").textIs("接続済みのデバイス")
+                        .relative(":flow").textIs("接続設定")
                         .relative(":flow").textIs("Bluetooth、ペア設定")
                         .relative(":flow").classIs("android.widget.ImageView")
                 }
@@ -75,7 +61,7 @@ class RelativeCommand1_ja : UITest() {
                     it.exist("ネットワークとインターネット")
                         .flow().textIs("モバイル、Wi-Fi、アクセス ポイント")
                         .flow().classIs("android.widget.ImageView")
-                        .flow().textIs("接続済みのデバイス")
+                        .flow().textIs("接続設定")
                         .flow().textIs("Bluetooth、ペア設定")
                         .flow().classIs("android.widget.ImageView")
                 }
@@ -85,7 +71,7 @@ class RelativeCommand1_ja : UITest() {
                     it.exist("ネットワークとインターネット") {
                         flow().textIs("モバイル、Wi-Fi、アクセス ポイント")
                         flow(2).classIs("android.widget.ImageView")
-                        flow(3).textIs("接続済みのデバイス")
+                        flow(3).textIs("接続設定")
                         flow(4).textIs("Bluetooth、ペア設定")
                         flow(5).classIs("android.widget.ImageView")
                     }
@@ -105,7 +91,7 @@ class RelativeCommand1_ja : UITest() {
                 }.expectation {
                     it.exist("ネットワークとインターネット")
                         .relative(":vflow").textIs("モバイル、Wi-Fi、アクセス ポイント")
-                        .relative(":vflow").textIs("接続済みのデバイス")
+                        .relative(":vflow").textIs("接続設定")
                         .relative(":vflow").textIs("Bluetooth、ペア設定")
                         .relative(":vflow").textIs("アプリ")
                 }
@@ -114,7 +100,7 @@ class RelativeCommand1_ja : UITest() {
                 expectation {
                     it.exist("ネットワークとインターネット")
                         .vflow().textIs("モバイル、Wi-Fi、アクセス ポイント")
-                        .vflow().textIs("接続済みのデバイス")
+                        .vflow().textIs("接続設定")
                         .vflow().textIs("Bluetooth、ペア設定")
                         .vflow().textIs("アプリ")
                 }
@@ -123,7 +109,7 @@ class RelativeCommand1_ja : UITest() {
                 expectation {
                     it.exist("ネットワークとインターネット") {
                         vflow().textIs("モバイル、Wi-Fi、アクセス ポイント")
-                        vflow(2).textIs("接続済みのデバイス")
+                        vflow(2).textIs("接続設定")
                         vflow(3).textIs("Bluetooth、ペア設定")
                         vflow(4).textIs("アプリ")
                     }

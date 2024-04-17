@@ -58,7 +58,7 @@ class Select1_ja : UITest() {
         scenario {
             case(1) {
                 action {
-                    it.selectWithScrollDown("プライバシー")
+                    it.selectWithScrollDown("セキュリティとプライバシー")
                 }
             }
             case(2) {

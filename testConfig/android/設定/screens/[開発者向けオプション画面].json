@@ -14,8 +14,9 @@
   },
 
   "scroll": {
+    "header-elements": "[開発者向けオプションの使用バー]",
     "start-elements": "",
     "end-elements": "",
-    "overlay-elements": "[開発者向けオプションの使用バー]"
+    "overlay-elements": ""
   }
 }

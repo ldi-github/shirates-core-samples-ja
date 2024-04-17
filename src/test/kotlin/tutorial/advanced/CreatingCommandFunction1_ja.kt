@@ -18,8 +18,6 @@ class CreatingCommandFunction1_ja : UITest() {
             case(1) {
                 condition {
                     it.macro("[Android設定トップ画面]")
-                        .flickAndGoDown()
-                        .dontExist("[ユーザー補助]")
                 }.action {
                     it.scrollToTop()
                         .tapWithScrollDown("[ユーザー補助]")
@@ -68,7 +66,7 @@ class CreatingCommandFunction1_ja : UITest() {
             case(1) {
                 condition {
                     it.macro("[Android設定トップ画面]")
-                        .flickAndGoDown()
+                        .flickAndGoDown(repeat = 2)
                         .dontExist("[ユーザー補助]")
                 }.action {
                     it.tapWithScrollDownFromTop("[ユーザー補助]")

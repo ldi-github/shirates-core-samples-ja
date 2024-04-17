@@ -22,8 +22,8 @@ class ExistDontExistInCellAndroid_ja : UITest() {
                         exist("ネットワークとインターネット")
                         exist("モバイル、Wi-Fi、アクセス ポイント")
                     }
-                    it.cell("<接続済みのデバイス>:ancestor(2)") {
-                        exist("接続済みのデバイス")
+                    it.cell("<接続設定>:ancestor(2)") {
+                        exist("接続設定")
                         exist("Bluetooth、ペア設定")
                     }
                 }
@@ -34,8 +34,8 @@ class ExistDontExistInCellAndroid_ja : UITest() {
                         exist("ネットワークとインターネット")
                         exist("モバイル、Wi-Fi、アクセス ポイント")
                     }
-                    it.cellOf("接続済みのデバイス") {
-                        exist("接続済みのデバイス")
+                    it.cellOf("接続設定") {
+                        exist("接続設定")
                         exist("Bluetooth、ペア設定")
                     }
                 }
@@ -74,8 +74,8 @@ class ExistDontExistInCellAndroid_ja : UITest() {
                         exist("ネットワークとインターネット")
                         dontExist("ねこ")
                     }
-                    it.cellOf("接続済みのデバイス") {
-                        exist("接続済みのデバイス")
+                    it.cellOf("接続設定") {
+                        exist("接続設定")
                         dontExist("いぬ")
                     }
                 }

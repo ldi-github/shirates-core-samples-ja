@@ -59,14 +59,14 @@ class Swipe1_ja : UITest() {
             }
             case(2) {
                 condition {
-                    it.exist("[セキュリティ]")
-                        .exist("[プライバシー]")
+                    it.exist("[セキュリティとプライバシー]")
+                        .exist("[位置情報]")
                 }.action {
-                    it.select("[セキュリティ]")
+                    it.select("[セキュリティとプライバシー]")
                         .swipeToBottomOfScreen(durationSeconds = 10.0)
                 }.expectation {
-                    it.exist("[セキュリティ]")
-                        .dontExist("[プライバシー]")
+                    it.exist("[セキュリティとプライバシー]")
+                        .dontExist("[位置情報]")
                 }
             }
         }

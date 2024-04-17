@@ -12,7 +12,7 @@ import shirates.core.driver.platformName
 import shirates.core.driver.platformVersion
 import shirates.core.testcode.UITest
 
-@Testrun("testConfig/android/設定/testrun.properties")
+@Testrun("testConfig/android/testrun/android_12/testrun.properties")
 class PlatformProperties1_ja : UITest() {
 
     @Test

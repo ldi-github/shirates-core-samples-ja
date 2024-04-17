@@ -14,6 +14,9 @@
   "[フリーボード]": {
     "packageOrBundleId": "com.apple.freeform"
   },
+  "[News]": {
+    "packageOrBundleId": "com.apple.news"
+  },
   "[アプリ1]": {
     "packageOrBundleId": "com.example.app1"
   }
