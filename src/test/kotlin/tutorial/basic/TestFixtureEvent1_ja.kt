@@ -72,7 +72,7 @@ class TestFixtureEvent1_ja : UITest() {
         scenario {
             case(1) {
                 expectation {
-                    it.exist("接続済みのデバイス")
+                    it.exist("接続設定")
                 }
             }
         }
