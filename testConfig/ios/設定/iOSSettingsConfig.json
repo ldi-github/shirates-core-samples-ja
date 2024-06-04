@@ -22,7 +22,8 @@
   },
 
   "capabilities": {
-    "bundleId": "com.apple.Preferences"
+    "language": "ja",
+    "locale": "JP"
   },
 
   "profiles": [
