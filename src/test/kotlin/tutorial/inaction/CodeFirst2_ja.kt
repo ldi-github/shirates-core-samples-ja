@@ -4,13 +4,13 @@ import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import shirates.core.configuration.Testrun
 import shirates.core.driver.commandextension.*
-import shirates.core.testcode.NoLoadRun
+import shirates.core.testcode.Manual
 import shirates.core.testcode.UITest
 
 @Testrun("testConfig/android/電卓/testrun.properties")
 class CodeFirst2_ja : UITest() {
 
-    @NoLoadRun
+    @Manual
     @Test
     @DisplayName("電卓を起動")
     fun A0010() {
@@ -26,7 +26,7 @@ class CodeFirst2_ja : UITest() {
         }
     }
 
-    @NoLoadRun
+    @Manual
     @Test
     @DisplayName("足し算")
     fun A0020() {
@@ -48,7 +48,7 @@ class CodeFirst2_ja : UITest() {
         }
     }
 
-    @NoLoadRun
+    @Manual
     @Test
     @DisplayName("ゼロ除算")
     fun A0030() {

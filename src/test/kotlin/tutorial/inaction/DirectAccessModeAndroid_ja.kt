@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test
 import shirates.core.configuration.Testrun
 import shirates.core.driver.DisableCache
 import shirates.core.driver.commandextension.*
-import shirates.core.testcode.NoLoadRun
+import shirates.core.testcode.Manual
 import shirates.core.testcode.UITest
 import shirates.core.utility.time.StopWatch
 
@@ -93,7 +93,7 @@ class DirectAccessModeAndroid_ja : UITest() {
         }
     }
 
-    @NoLoadRun
+    @Manual
     @Test
     @Order(50)
     fun performanceComparison() {
