@@ -5,7 +5,7 @@ plugins {
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
-val shiratesCoreVersion = "7.5.0"
+val shiratesCoreVersion = "7.5.1"
 val appiumClientVersion = "9.1.0"
 
 val userHome = System.getProperty("user.home")
@@ -13,7 +13,7 @@ val userHome = System.getProperty("user.home")
 repositories {
     mavenCentral()
 
-    maven(url = "file:/$userHome/github/ldi-github/shirates-core/build/repository")
+//    maven(url = "file:/$userHome/github/ldi-github/shirates-core/build/repository")
 }
 
 dependencies {
