@@ -29,12 +29,6 @@ class AssertingAnyValue2_ja : UITest() {
                     it.select("[スポットタブ]")
                         .imageIs("[スポットタブ(選択状態)]")
                         .imageIsNot("[スポットタブ]")
-
-                        .imageIs("[スポットタブ(選択状態)]")
-                        .imageIsNot("[スポットタブ]")
-
-                        .imageIs("[スポットタブ(選択状態)]")
-                        .imageIsNot("[スポットタブ]")
                 }
             }
         }

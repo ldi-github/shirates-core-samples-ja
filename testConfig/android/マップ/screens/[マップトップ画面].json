@@ -5,7 +5,7 @@
     "[マップフッターメニュー(共通)]"
   ],
 
-  "identity": "[below_search_omnibox_container][スポットタブ][経路タブ][保存済みタブ][投稿タブ][お知らせタブ]",
+  "identity": "[スポットタブ][投稿タブ]",
 
   "selectors": {
 

@@ -6,7 +6,8 @@
     "packageOrBundleId": "com.android.chrome"
   },
   "[マップ]": {
-    "packageOrBundleId": "com.google.android.apps.maps"
+    "packageOrBundleId": "com.google.android.apps.maps",
+    "appIconName": "マップ||Maps"
   },
   "[時計]": {
     "packageOrBundleId": "com.google.android.deskclock"

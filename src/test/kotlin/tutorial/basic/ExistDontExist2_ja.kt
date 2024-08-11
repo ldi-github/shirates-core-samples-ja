@@ -2,6 +2,7 @@ package tutorial.basic
 
 import org.junit.jupiter.api.Order
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.extension.ExtensionContext
 import shirates.core.configuration.Testrun
 import shirates.core.driver.commandextension.dontExistImage
 import shirates.core.driver.commandextension.existImage
@@ -12,13 +13,8 @@ import shirates.helper.ImageSetupHelper
 @Testrun("testConfig/android/マップ/testrun.properties")
 class ExistDontExist2_ja : UITest() {
 
-    @Test
-    @Order(0)
-    fun setupImage() {
-
-        scenario {
-            ImageSetupHelper.SetupImagesMapsTopScreen()
-        }
+    override fun beforeAllAfterSetup(context: ExtensionContext?) {
+        ImageSetupHelper.SetupImagesMapsTopScreen()
     }
 
     @Test
@@ -34,17 +30,8 @@ class ExistDontExist2_ja : UITest() {
                         .existImage("[スポットタブ(選択状態)]")
                         .dontExistImage("[スポットタブ]")
 
-                        .existImage("[経路タブ]")
-                        .dontExistImage("[経路タブ(選択状態)]")
-
-                        .existImage("[保存済みタブ]")
-                        .dontExistImage("[保存済みタブ(選択状態)]")
-
                         .existImage("[投稿タブ]")
                         .dontExistImage("[投稿タブ(選択状態)]")
-
-                        .existImage("[お知らせタブ]")
-                        .dontExistImage("[お知らせタブ(選択状態)]")
                 }
             }
         }
@@ -53,14 +40,14 @@ class ExistDontExist2_ja : UITest() {
 
     @Test
     @Order(20)
-    fun existImage_WARN() {
+    fun existImage_WARN_COND_AUTO() {
 
         scenario {
             case(1) {
                 condition {
                     it.macro("[マップトップ画面]")
                 }.expectation {
-                    it.existImage("[スポットタブ]")   // WARN
+                    it.existImage("[投稿タブ(選択状態)]")   // WARN & COND_AUTO
                 }
             }
         }
@@ -68,21 +55,6 @@ class ExistDontExist2_ja : UITest() {
 
     @Test
     @Order(30)
-    fun existImage_NG() {
-
-        scenario {
-            case(1) {
-                condition {
-                    it.macro("[マップトップ画面]")
-                }.expectation {
-                    it.existImage("[スポットタブ]", throwsException = true)   // NG
-                }
-            }
-        }
-    }
-
-    @Test
-    @Order(40)
     fun dontExistImage_OK() {
 
         scenario {
@@ -97,7 +69,7 @@ class ExistDontExist2_ja : UITest() {
     }
 
     @Test
-    @Order(50)
+    @Order(40)
     fun dontExistImage_NG() {
 
         scenario {

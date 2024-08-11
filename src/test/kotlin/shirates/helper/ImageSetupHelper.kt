@@ -115,26 +115,11 @@ object ImageSetupHelper : TestDrive {
 
         rootElement.cropImage("[マップトップ画面].png")
         it.select("[スポットタブ(選択状態)]").cropTo(dir)
-        it.select("[経路タブ]").cropTo(dir)
-        it.select("[保存済みタブ]").cropTo(dir)
         it.select("[投稿タブ]").cropTo(dir)
-        it.select("[お知らせタブ]").cropTo(dir)
-
-        it.tap("[経路タブ]")
-            .wait()
-        it.select("[スポットタブ]").cropTo(dir)
-        it.select("[経路タブ(選択状態)]").cropTo(dir)
-
-        it.tap("[保存済みタブ]")
-            .wait()
-        it.select("[保存済みタブ(選択状態)]").cropTo(dir)
 
         it.tap("[投稿タブ]")
             .wait()
+        it.select("[スポットタブ]").cropTo(dir)
         it.select("[投稿タブ(選択状態)]").cropTo(dir)
-
-        it.tap("[お知らせタブ]")
-            .wait()
-        it.select("[お知らせタブ(選択状態)]").cropTo(dir)
     }
 }

@@ -28,40 +28,15 @@ class CroppingImages1_ja : UITest() {
                 }.action {
                     rootElement.cropImage("[マップトップ画面].png")
                     it.select("[スポットタブ]").cropAndCopy("[スポットタブ(選択状態)].png")
-                    it.select("[経路タブ]").cropAndCopy("[経路タブ画像].png")
-                    it.select("[保存済みタブ]").cropAndCopy("[保存済みタブ].png")
                     it.select("[投稿タブ]").cropAndCopy("[投稿タブ].png")
-                    it.select("[お知らせタブ]").cropAndCopy("[お知らせタブ].png")
                 }
             }
             case(2) {
                 action {
-                    it.tap("[経路タブ]")
-                        .screenIs("[マップ経路画面]")
-                        .wait()
-                    it.select("[スポットタブ]").cropAndCopy("[スポットタブ].png")
-                    it.select("[経路タブ]").cropAndCopy("[経路タブ(選択状態)].png")
-                }
-            }
-            case(3) {
-                action {
-                    it.tap("[保存済みタブ]")
-                        .wait()     // アニメーションが終了するのを待ちます
-                    it.select("[保存済みタブ]").cropAndCopy("[保存済みタブ(選択状態)].png")
-                }
-            }
-            case(4) {
-                action {
                     it.tap("[投稿タブ]")
                         .wait()     // アニメーションが終了するのを待ちます
+                    it.select("[スポットタブ]").cropAndCopy("[スポットタブ].png")
                     it.select("[投稿タブ]").cropAndCopy("[投稿タブ(選択状態)].png")
-                }
-            }
-            case(5) {
-                action {
-                    it.tap("[お知らせタブ]")
-                        .wait()     // アニメーションが終了するのを待ちます
-                    it.select("[お知らせタブ]").cropAndCopy("[お知らせタブ(選択状態)].png")
                 }
             }
         }

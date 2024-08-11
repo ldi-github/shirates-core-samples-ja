@@ -60,54 +60,15 @@ class AssertingImage1_ja : UITest() {
                     it.macro("[マップトップ画面]")
                 }.expectation {
                     it.select("[スポットタブ]").imageIs("[スポットタブ(選択状態)]")
-                    it.select("[経路タブ]").imageIs("[経路タブ]")
-                    it.select("[保存済みタブ]").imageIs("[保存済みタブ]")
                     it.select("[投稿タブ]").imageIs("[投稿タブ]")
-                    it.select("[お知らせタブ]").imageIs("[お知らせタブ]")
                 }
             }
             case(2) {
                 action {
-                    it.tap("[経路タブ]")
-                }.expectation {
-                    it.select("[スポットタブ]").imageIs("[スポットタブ]")
-                    it.select("[経路タブ]").imageIs("[経路タブ(選択状態)]")
-                    it.select("[保存済みタブ]").imageIs("[保存済みタブ]")
-                    it.select("[投稿タブ]").imageIs("[投稿タブ]")
-                    it.select("[お知らせタブ]").imageIs("[お知らせタブ]")
-                }
-            }
-            case(3) {
-                action {
-                    it.tap("[保存済みタブ]")
-                }.expectation {
-                    it.select("[スポットタブ]").imageIs("[スポットタブ]")
-                    it.select("[経路タブ]").imageIs("[経路タブ]")
-                    it.select("[保存済みタブ]").imageIs("[保存済みタブ(選択状態)]")
-                    it.select("[投稿タブ]").imageIs("[投稿タブ]")
-                    it.select("[お知らせタブ]").imageIs("[お知らせタブ]")
-                }
-            }
-            case(4) {
-                action {
                     it.tap("[投稿タブ]")
                 }.expectation {
                     it.select("[スポットタブ]").imageIs("[スポットタブ]")
-                    it.select("[経路タブ]").imageIs("[経路タブ]")
-                    it.select("[保存済みタブ]").imageIs("[保存済みタブ]")
                     it.select("[投稿タブ]").imageIs("[投稿タブ(選択状態)]")
-                    it.select("[お知らせタブ]").imageIs("[お知らせタブ]")
-                }
-            }
-            case(5) {
-                action {
-                    it.tap("[お知らせタブ]")
-                }.expectation {
-                    it.select("[スポットタブ]").imageIs("[スポットタブ]")
-                    it.select("[経路タブ]").imageIs("[経路タブ]")
-                    it.select("[保存済みタブ]").imageIs("[保存済みタブ]")
-                    it.select("[投稿タブ]").imageIs("[投稿タブ]")
-                    it.select("[お知らせタブ]").imageIs("[お知らせタブ(選択状態)]")
                 }
             }
         }

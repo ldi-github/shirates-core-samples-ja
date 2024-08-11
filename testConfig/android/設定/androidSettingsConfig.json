@@ -52,10 +52,10 @@
       }
     },
     {
-      "profileName": "Android 13 with Tat2 & Tag3",
+      "profileName": "Android 14 with Tat2 & Tag3",
       "specialTags": "Tag2, Tag3",
       "capabilities": {
-        "platformVersion": "13"
+        "platformVersion": "14"
       }
     },
 

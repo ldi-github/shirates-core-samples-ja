@@ -1,7 +1,7 @@
 {
   "testConfigName": "mapsConfig",
 
-  "appIconName": "マップ",
+  "appIconName": "マップ||Maps",
 
   "packageOrBundleId": "com.google.android.apps.maps",
 
