@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Order
 import org.junit.jupiter.api.Test
 import shirates.core.configuration.Testrun
 import shirates.core.driver.commandextension.*
-import shirates.core.driver.view
+import shirates.core.driver.rootElement
 import shirates.core.testcode.UITest
 
 @Testrun("testConfig/android/マップ/testrun.properties")
@@ -62,7 +62,7 @@ class Scroll3_ja : UITest() {
                 condition {
                     it.macro("[マップトップ画面]")
                 }.action {
-                    view.scrollRight()
+                    rootElement.scrollRight()
                         .scrollLeft()
                 }
             }

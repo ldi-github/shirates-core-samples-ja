@@ -1,0 +1,19 @@
+{
+  "testConfigName": "iOSSettingsVisionConfig",
+
+  "appIconName": "設定",
+
+  "packageOrBundleId": "com.apple.Preferences",
+
+  "startupPackageOrBundleId": "com.apple.Preferences",
+
+  "dataset": {
+    "apps": "testConfig/ios/設定（Vision）/dataset/apps.json"
+  },
+
+  "capabilities": {
+    "language": "ja",
+    "locale": "JP"
+  }
+
+}
