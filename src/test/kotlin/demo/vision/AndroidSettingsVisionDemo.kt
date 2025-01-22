@@ -16,7 +16,7 @@ class AndroidSettingsVisionDemo : VisionTest() {
                 condition {
                     it.screenIs("[Android設定トップ画面]")
                 }.action {
-                    it.tap("ネットワークとインターネット", useCache = true)
+                    it.tap("ネットワークとインターネット")
                 }.expectation {
                     it.screenIs("[ネットワークとインターネット画面]")
                 }

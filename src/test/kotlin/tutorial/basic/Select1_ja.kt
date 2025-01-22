@@ -16,19 +16,19 @@ class Select1_ja : UITest() {
         scenario {
             case(1) {
                 action {
-                    it.select("設定", log = true)
+                    it.select("設定")
                     output(it)
                 }
             }
             case(2) {
                 action {
-                    it.selectWithScrollDown("システム", log = true)
+                    it.selectWithScrollDown("システム")
                     output(it)
                 }
             }
             case(3) {
                 action {
-                    it.selectWithScrollUp("設定", log = true)
+                    it.selectWithScrollUp("設定")
                     output(it)
                 }
             }
@@ -43,9 +43,9 @@ class Select1_ja : UITest() {
             case(1) {
                 action {
                     it.scanElements()
-                        .selectInScanResults("設定", log = true)
-                        .selectInScanResults("ユーザー補助", log = true)
-                        .selectInScanResults("システム", log = true)
+                        .selectInScanResults("設定")
+                        .selectInScanResults("ユーザー補助")
+                        .selectInScanResults("システム")
                 }
             }
         }

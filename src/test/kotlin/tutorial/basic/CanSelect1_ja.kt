@@ -16,7 +16,7 @@ class CanSelect1_ja : UITest() {
         scenario {
             case(1) {
                 action {
-                    it.canSelect("設定", log = true)
+                    it.canSelect("設定")
                 }
             }
             case(2) {
@@ -51,10 +51,10 @@ class CanSelect1_ja : UITest() {
                 condition {
                     it.scanElements()
                 }.action {
-                    it.canSelectInScanResults("設定", log = true)
-                    it.canSelectInScanResults("ユーザー補助", log = true)
-                    it.canSelectInScanResults("システム", log = true)
-                    it.canSelectInScanResults("ほげ", log = true)
+                    it.canSelectInScanResults("設定")
+                    it.canSelectInScanResults("ユーザー補助")
+                    it.canSelectInScanResults("システム")
+                    it.canSelectInScanResults("ほげ")
                 }
             }
             case(2) {

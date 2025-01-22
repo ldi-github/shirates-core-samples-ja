@@ -18,7 +18,7 @@ class AssertingAttribute1_ja : UITest() {
                 condition {
                     it.macro("[Android設定トップ画面]")
                 }.action {
-                    it.select("ネットワークとインターネット", log = true)
+                    it.select("ネットワークとインターネット")
                 }.expectation {
                     it
                         .textIs("ネットワークとインターネット")
@@ -41,7 +41,7 @@ class AssertingAttribute1_ja : UITest() {
             }
             case(2) {
                 action {
-                    it.select("#account_avatar", log = true)
+                    it.select("#account_avatar")
                 }.expectation {
                     it.textIsEmpty()
                 }
@@ -58,7 +58,7 @@ class AssertingAttribute1_ja : UITest() {
                 condition {
                     it.macro("[Android設定トップ画面]")
                 }.action {
-                    it.select("ネットワークとインターネット", log = true)
+                    it.select("ネットワークとインターネット")
                 }.expectation {
                     it.textIs("接続済みのデバイス")
                 }
@@ -75,7 +75,7 @@ class AssertingAttribute1_ja : UITest() {
                 condition {
                     it.macro("[Android設定トップ画面]")
                 }.action {
-                    it.select("#account_avatar", log = true)
+                    it.select("#account_avatar")
                 }.expectation {
                     it
                         .idIs("account_avatar")
@@ -94,7 +94,7 @@ class AssertingAttribute1_ja : UITest() {
                 condition {
                     it.macro("[Android設定トップ画面]")
                 }.action {
-                    it.select("#account_avatar", log = true)
+                    it.select("#account_avatar")
                 }.expectation {
                     it
                         // OK. expected is converted to "com.android.settings:id/account_avatar"
@@ -119,7 +119,7 @@ class AssertingAttribute1_ja : UITest() {
                 condition {
                     it.macro("[ネットワークとインターネット画面]")
                 }.action {
-                    it.select("@ネットワークとインターネット", log = true)
+                    it.select("@ネットワークとインターネット")
                 }.expectation {
                     it.accessIs("ネットワークとインターネット")
                         .accessIsNot("システム")
@@ -137,7 +137,7 @@ class AssertingAttribute1_ja : UITest() {
                 condition {
                     it.macro("[ネットワークとインターネット画面]")
                 }.action {
-                    it.select("@ネットワークとインターネット", log = true)
+                    it.select("@ネットワークとインターネット")
                 }.expectation {
                     it.accessIs("接続済みのデバイス")
                 }
@@ -154,7 +154,7 @@ class AssertingAttribute1_ja : UITest() {
                 condition {
                     it.macro("[Android設定トップ画面]")
                 }.action {
-                    it.select("#account_avatar", log = true)
+                    it.select("#account_avatar")
                 }.expectation {
                     it.classIs("android.widget.ImageView")
                         .classIsNot("android.widget.TextView")
@@ -172,7 +172,7 @@ class AssertingAttribute1_ja : UITest() {
                 condition {
                     it.macro("[Android設定トップ画面]")
                 }.action {
-                    it.select("#account_avatar", log = true)
+                    it.select("#account_avatar")
                 }.expectation {
                     it.classIs("android.widget.TextView")
                 }
@@ -189,7 +189,7 @@ class AssertingAttribute1_ja : UITest() {
                 condition {
                     it.macro("[Android設定トップ画面]")
                 }.action {
-                    it.select("#account_avatar", log = true)
+                    it.select("#account_avatar")
                 }.expectation {
                     it.attributeIs("package", "com.android.settings")
                 }
@@ -206,7 +206,7 @@ class AssertingAttribute1_ja : UITest() {
                 condition {
                     it.macro("[Android設定トップ画面]")
                 }.action {
-                    it.select("#account_avatar", log = true)
+                    it.select("#account_avatar")
                 }.expectation {
                     it.attributeIs("package", "com.google.android.calculator")
                 }
