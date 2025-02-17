@@ -5,7 +5,7 @@ plugins {
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
-val shiratesCoreVersion = "8.0.1"
+val shiratesCoreVersion = "8.0.14"
 val appiumClientVersion = "9.1.0"
 
 val userHome = System.getProperty("user.home")
@@ -19,8 +19,8 @@ repositories {
 dependencies {
 
     // JUnit 5
-    implementation("org.junit.jupiter:junit-jupiter-api:5.10.1")
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.1")
+    implementation("org.junit.jupiter:junit-jupiter-api:5.10.5")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.5")
 
     // shirates-core
     testImplementation("io.github.ldi-github:shirates-core:$shiratesCoreVersion")
@@ -29,7 +29,7 @@ dependencies {
     testImplementation("io.appium:java-client:$appiumClientVersion")
 
     // Apache Commons IO
-    testImplementation("commons-io:commons-io:2.15.1")
+    testImplementation("commons-io:commons-io:2.18.0")
 }
 
 tasks.test {
