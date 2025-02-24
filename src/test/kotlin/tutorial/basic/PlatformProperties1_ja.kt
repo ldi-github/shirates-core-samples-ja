@@ -26,7 +26,7 @@ class PlatformProperties1_ja : UITest() {
                         .thisIs("android")
 
                     platformVersion
-                        .thisIs("12")
+                        .thisIs("14")
 
                     isAndroid
                         .thisIsTrue()
