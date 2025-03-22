@@ -84,8 +84,8 @@ class DirectAccessModeIos_ja : UITest() {
     fun performanceComparison() {
 
         fun process(count: Int) {
-            val sw1 = StopWatch()
-            val sw2 = StopWatch()
+            val sw1 = StopWatch("sw1")
+            val sw2 = StopWatch("sw2")
             invalidateCache()
 
             sw1.start()

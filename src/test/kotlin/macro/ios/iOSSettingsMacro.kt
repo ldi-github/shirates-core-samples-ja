@@ -21,7 +21,7 @@ object iOSSettingsMacro {
         }
 
         it.restartApp("[設定]")
-            .screenIs("[iOS設定画面]")
+            .screenIs("[iOS設定トップ画面]")
     }
 
     @Macro("[デベロッパ画面]")

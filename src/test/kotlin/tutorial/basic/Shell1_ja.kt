@@ -45,14 +45,6 @@ class Shell1_ja : UITest() {
                         shellResult = it.shellAsync("ping", "localhost", "-c", "3")
                     }
                 }.expectation {
-                    shellResult!!.resultString.thisIsEmpty("resultString is empty")
-                }
-            }
-            case(2) {
-                action {
-                    output("waitFor()")
-                    shellResult!!.waitFor()
-                }.expectation {
                     shellResult!!.resultString.thisIsNotEmpty("resultString is not empty")
                     output(shellResult!!.resultString)
                 }
