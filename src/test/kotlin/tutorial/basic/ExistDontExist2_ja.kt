@@ -7,6 +7,7 @@ import shirates.core.configuration.Testrun
 import shirates.core.driver.commandextension.dontExistImage
 import shirates.core.driver.commandextension.existImage
 import shirates.core.driver.commandextension.macro
+import shirates.core.driver.commandextension.tap
 import shirates.core.testcode.UITest
 import shirates.helper.ImageSetupHelper
 
@@ -46,6 +47,7 @@ class ExistDontExist2_ja : UITest() {
             case(1) {
                 condition {
                     it.macro("[マップトップ画面]")
+                        .tap("投稿")
                 }.expectation {
                     it.existImage("[投稿タブ(選択状態)]")   // WARN & COND_AUTO
                 }

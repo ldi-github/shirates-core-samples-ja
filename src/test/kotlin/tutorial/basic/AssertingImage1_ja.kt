@@ -44,7 +44,7 @@ class AssertingImage1_ja : UITest() {
                 condition {
                     it.macro("[マップトップ画面]")
                 }.expectation {
-                    it.select("[経路タブ]").imageIs("[経路タブ(選択状態)]")     // NG
+                    it.select("[投稿タブ]").imageIs("[投稿タブ(選択状態)]")     // NG
                 }
             }
         }
